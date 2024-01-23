@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-block-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.editing-tools {
+  margin-bottom: 10px;
+}
