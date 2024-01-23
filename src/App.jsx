@@ -40,6 +40,14 @@ function App() {
     setBlocks(updatedBlocks);
   };
 
+  const moveBlock = (dragIndex, hoverIndex) => {
+    const draggedBlock = blocks[dragIndex];
+    const updatedBlocks = [...blocks];
+    updatedBlocks.splice(dragIndex, 1);
+    updatedBlocks.splice(hoverIndex, 0, draggedBlock);
+    setBlocks(updatedBlocks);
+  };
+
   return (
     <div className="app">
       <Space direction="vertical" style={{ width: "100%", padding: "20px" }}>
@@ -51,6 +59,7 @@ function App() {
             onDelete={deleteBlock}
             onContentChange={updateBlockContent}
             onImageChange={updateBlockImage}
+            onMove={moveBlock}
           />
         ))}
       </Space>
