@@ -57,7 +57,6 @@ const Block = ({ index, block, onDelete, onContentChange, onImageChange }) => {
         <>
           {block.type === "text" ? (
             <>
-              {renderEditingTools()}
               <Input.TextArea
                 value={block.content}
                 onChange={(e) => onContentChange(block.id, e.target.value)}
