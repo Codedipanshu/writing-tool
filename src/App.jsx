@@ -50,6 +50,10 @@ function App() {
 
   return (
     <div className="app">
+      <div className="add-block-btn">
+        <Button onClick={() => addBlock("text")}>Add Text Block</Button>
+        <Button onClick={() => addBlock("picture")}>Add Picture Block</Button>
+      </div>
       <Space direction="vertical" style={{ width: "100%", padding: "20px" }}>
         {blocks.map((block, index) => (
           <Block
@@ -63,10 +67,6 @@ function App() {
           />
         ))}
       </Space>
-      <div className="add-block-btn">
-        <Button onClick={() => addBlock("text")}>Add Text Block</Button>
-        <Button onClick={() => addBlock("picture")}>Add Picture Block</Button>
-      </div>
     </div>
   );
 }
